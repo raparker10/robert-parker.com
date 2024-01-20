@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Robert Parker">
+        <meta name="description" content="Landing page for my personal site.">
+        <meta name="keywords" content="San Antonio, travel, dining, food, bar, park, mission, neighborhood">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/favoritesa-style-basic.css">
+        <link rel="icon" sizes="32x32" type="image/png" href="./images/robert-parker.png">
+        <title>Robert Parker</title>
+      </head>
+    <style>
+.map-button-active {
+  background-color: cyan;
+  border-style:inset; /*  inset; */
+  border-width: 3px;
+}      
+
+.banner-visible {
+  display: block;
+}
+    </style>
+<body>
+<noscript>Javascript is required.</noscript>
+
+<header class="header-wrapper">
+    A place to share my work, interests, hobbies, and travel
+</header>
+
+<figure id="bannerID" class="banner-wrapper">
+  <picture id="image-1" class="banner-item banner-visible">
+    <source media="(max-width: 640px)" srcset="./images/header-narrow.jpg"/>
+    <source media="(max-width: 896px)" srcset="./images/header-medium.jpg"/>
+    <img src="./images/header-wide.jpg" alt="Pickover Attractor"/>
+  </picture>
+  
+  <!-- Top menu options -->
+<nav class="topnav-wrapper" id="topnavwrapperID">
+  <a href="./travel.html" class="topnav-item active">Travel</a>
+  <a href="./computing.html" class="topnav-item-right">Computing</a>
+  <a href="./photography.html" class="topnav-item-right">Photography</a>
+  <a href="./fractals.html" class="topnav-item-right">Fractals</a>
+</nav> <!-- end topnav wrapper-->
+
+<div class="header-spacer"></div>
+
+<div class="main-wrapper">
+<!-- Slideshow container -->
+
+
+</figure>
+<script>
+function resetlist() {
+  var buttons = document.getElementsByClassName("listinput");
+  [].map.call(buttons, button => {button.checked = false;});
+} 
+</script>
+<div class="filterbar-wrapper">
+<button id="findbutton" class="filterbar-button">Find</button>
+<button id="mapbutton" class="filterbar-button">Map</button>
+<button id="reset" type="button" class="filterbar-button" onclick="resetlist()">Reset</button>
+
+
+
+</div> <!-- filterbar wrapper -->
+
+
+</div> <!-- end main wrapper -->
+
+<footer class="footer-wrapper"></footer>
+
+<script>
+
+// register button press events
+</script>
+
+</body>
+</html>
