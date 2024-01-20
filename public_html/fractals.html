@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Robert Parker">
+    <meta name="description" content="Landing page for my personal site.">
+    <meta name="keywords" content="San Antonio, travel, dining, food, bar, park, mission, neighborhood">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/favoritesa-style-basic.css">
+    <link rel="icon" sizes="32x32" type="image/png" href="./images/robert-parker.png">
+    <title>Robert Parker</title>
+</head>
+<style>
+    .map-button-active {
+        background-color: cyan;
+        border-style: inset; /*  inset; */
+        border-width: 3px;
+    }
+
+    .banner-visible {
+        display: block;
+    }
+</style>
+<body>
+    <noscript>Javascript is required.</noscript>
+
+    <header class="header-wrapper">
+        A place to share my work, interests, hobbies, and travel
+    </header>
+
+    <figure id="bannerID" class="banner-wrapper">
+        <picture id="image-1" class="banner-item banner-visible">
+            <source media="(max-width: 640px)" srcset="./images/header-narrow.jpg" />
+            <source media="(max-width: 896px)" srcset="./images/header-medium.jpg" />
+            <img src="./images/header-wide.jpg" alt="Pickover Attractor" />
+        </picture>
+
+        <!-- Top menu options -->
+        <nav class="topnav-wrapper" id="topnavwrapperID">
+            <a href="./travel.html" class="topnav-item active">Travel</a>
+            <a href="./computing.html" class="topnav-item-right">Computing</a>
+            <a href="./photography.html" class="topnav-item-right">Photography</a>
+            <a href="./fractals.html" class="topnav-item-right">Fractals</a>
+        </nav> <!-- end topnav wrapper-->
+    </figure>
+        <div class="header-spacer"></div>
+
+        <div class="main-wrapper">
+            <!-- Slideshow container -->
+    I became captivated by the beauty and variety of chaotic attractors while searching for a test case for learing DirectX 11 compute shaders.  Their varying orbits are a nice demonstration of the underlying dynamics found in other fractal types. My goal here is to animate them in "real time" with varying parameters to produce video of their motion.
+            <table>
+                <tr><th>Name</th><th>Dimensions</th></th></tr>
+                <tr>
+                    <td><a href="fractal-aizawa.html"><img src="./images/fractal-aizawa-thumbnail.jpg" />Aizawa</a></td><td>3</td>
+                </tr>
+                <tr>
+                    <td>Bedhead</td><td>2</td>
+                </tr>
+                <tr>
+                    <td>Bogdanov</td><td>2</td>
+                </tr>
+                <tr>
+                    <td>Chen</td>
+                </tr>
+                <tr>
+                    <td>Chua 2</td>
+                </tr>
+                <tr>
+                    <td>Chua</td>
+                </tr>
+                <tr>
+                    <td>Dadras</td>
+                </tr>
+                <tr>
+                    <td>DeJong</td>
+                </tr>
+                <tr>
+                    <td>Duffing</td>
+                </tr>
+                <tr>
+                    <td>Four-Wing</td>
+                </tr>
+                <tr>
+                    <td>Gingerbread Man</td>
+                </tr>
+                <tr>
+                    <td>Gumowski-Mira</td>
+                </tr>
+                <tr>
+                    <td>Halvorsen</td>
+                </tr>
+                <tr>
+                    <td>Henon</td>
+                </tr>
+                <tr>
+                    <td>Hopalong</td>
+                </tr>
+                <tr>
+                    <td>Hopalong2</td>
+                </tr>
+                <tr>
+                    <td>Ikeda</td>
+                </tr>
+                <tr>
+                    <td>Kaneko 1</td>
+                </tr>
+                <tr>
+                    <td>King's Dream</td>
+                </tr>
+                <tr>
+                    <td>Lorenz 83</td>
+                </tr>
+                <tr>
+                    <td>Lorenz</td>
+                </tr>
+                <tr>
+                    <td>Lotka Volterra</td>
+                </tr>
+                <tr>
+                    <td>Metz</td>
+                </tr>
+                <tr>
+                    <td>Pickover</td>
+                </tr>
+                <tr>
+                    <td>Pickover2</td>
+                </tr>
+                <tr>
+                    <td>Rabinovich</td>
+                </tr>
+                <tr>
+                    <td>Sprott</td>
+                </tr>
+                <tr>
+                    <td>Strick</td>
+                </tr>
+                <tr>
+                    <td>Svensson</td>
+                </tr>
+                <tr>
+                    <td>Thomas</td>
+                </tr>
+                <tr>
+                    <td>Tinkerbell</td>
+                </tr>
+            </table>
+
+    <script>function resetlist() {
+  var buttons = document.getElementsByClassName("listinput");
+  [].map.call(buttons, button => {button.checked = false;});
+}</script>
+    <div class="filterbar-wrapper">
+        <button id="findbutton" class="filterbar-button">Find</button>
+        <button id="mapbutton" class="filterbar-button">Map</button>
+        <button id="reset" type="button" class="filterbar-button" onclick="resetlist()">Reset</button>
+    </div> <!-- filterbar wrapper -->
+
+    </div> <!-- end main wrapper -->
+
+    <footer class="footer-wrapper"></footer>
+
+    <script>// register button press events</script>
+
+</body>
+</html>
