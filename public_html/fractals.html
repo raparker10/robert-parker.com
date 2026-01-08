@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Robert Parker">
-    <meta name="description" content="Landing page for my personal site.">
-    <meta name="keywords" content="San Antonio, travel, dining, food, bar, park, mission, neighborhood">
+    <meta name="description" content="List of fractal types.">
+    <meta name="keywords" content="fractal, math, chaos, attractor">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/favoritesa-style-basic.css">
+    <link rel="stylesheet" type="text/css" href="./css/robertparkersat.css">
     <link rel="icon" sizes="32x32" type="image/png" href="./images/robert-parker.png">
-    <title>Robert Parker</title>
-</head>
+    <title>Fractals</title>
 <style>
     .map-button-active {
         background-color: cyan;
@@ -20,146 +19,126 @@
     .banner-visible {
         display: block;
     }
+
+    td.center-content {
+        vertical-align: top;
+        text-align: left;
+    }
+    .image-link {
+    /* This makes the entire container a block and clickable */
+    display: block;
+    /* Centers the content horizontally */
+    text-align: center;
+    /* Optional: Adds some space around the entire link */
+    margin: 10px;
+    /* Optional: Remove default link underline from text */
+    text-decoration: none; 
+    color: black;
+    }
+
+    .image-link img {
+    /* Makes the image behave like a block element, forcing the next element to a new line */
+    display: block;
+    margin: 0 auto; /* Centers the image if it's smaller than the anchor width */
+    /* Optional: Add space below the image */
+    margin-bottom: 5px;
+    /* Optional: Set max width for responsiveness */
+    max-width: 100%;
+    }
+.image-link img:hover {
+    transform: scale(1.25);
+}
+    .image-link span {
+    /* Optional: Styles the text */
+    font-size: 16px;
+    font-family: sans-serif;
+    }    
+.box > * {
+/*  border: 2px solid rgb(96 255 168); */
+  border-radius: 5px;
+/*  background-color: rgb(96 139 255); */
+  align-items: center;
+  margin: 0.5em;
+  /* flex: 1 1 0px; */
+  flex-grow: 0;
+}
+
+.box {
+/*  border: 2px dotted rgb(255 139 168); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}    
 </style>
+</head> 
 <body>
     <noscript>Javascript is required.</noscript>
 
-    <header class="header-wrapper">
-        A place to share my work, interests, hobbies, and travel
-    </header>
-
     <figure id="bannerID" class="banner-wrapper">
-        <picture id="image-1" class="banner-item banner-visible">
+        <a href="./index.html">
+            <picture id="image-1" class="banner-item banner-visible">
             <source media="(max-width: 640px)" srcset="./images/header-narrow.jpg" />
             <source media="(max-width: 896px)" srcset="./images/header-medium.jpg" />
-            <img src="./images/header-wide.jpg" alt="Pickover Attractor" />
+            <img width="100%" height="64px" src="./images/header-wide.jpg" alt="Pickover Attractor" />
         </picture>
+    </a>
 
         <!-- Top menu options -->
         <nav class="topnav-wrapper" id="topnavwrapperID">
+            <a href="./index.html" class="topnav-item active">Home</a>
             <a href="./travel.html" class="topnav-item active">Travel</a>
-            <a href="./computing.html" class="topnav-item-right">Computing</a>
-            <a href="./photography.html" class="topnav-item-right">Photography</a>
             <a href="./fractals.html" class="topnav-item-right">Fractals</a>
+            <a href="./photography.html" class="topnav-item-right">Photography</a>
+            <a href="./math.html" class="topnav-item-right">Math</a>
+            <a href="./computing.html" class="topnav-item-right">Computing</a>
         </nav> <!-- end topnav wrapper-->
     </figure>
         <div class="header-spacer"></div>
 
         <div class="main-wrapper">
-            <!-- Slideshow container -->
-    I became captivated by the beauty and variety of chaotic attractors while searching for a test case for learing DirectX 11 compute shaders.  Their varying orbits are a nice demonstration of the underlying dynamics found in other fractal types. My goal here is to animate them in "real time" with varying parameters to produce video of their motion.
-            <table>
-                <tr><th>Name</th><th>Dimensions</th></th></tr>
-                <tr>
-                    <td><a href="fractal-aizawa.html"><img src="./images/fractal-aizawa-thumbnail.jpg" />Aizawa</a></td><td>3</td>
+            <p>List of fractals categorized by type:</p>
+             
+            <h2>Attractors</h2>
+<div class="box">
+                    <div><a href="fractal-bedhead.html" class="image-link"><img height="64px" width="64px" src="./images/fractal-bedhead-thumbnail.jpg" /><span>Bedhead</span></a></div>
+                    <div><a href="fractal-chen.html" class="image-link"><img height="64px" width="64px" src="./images/fractal-chen-thumbnail.jpg" /><span>Chen</span></a></div>
+                    <div><a href="fractal-chua2.html" class="image-link"><img src="./images/fractal-chua2-thumbnail.jpg" /><span>Chua&nbsp;2</span></a></div>
+                    <div><a href="fractal-chua.html" class="image-link"><img src="./images/fractal-chua-thumbnail.jpg" /><span>Chua</span></a></div>
+                    <div><a href="fractal-dadras.html" class="image-link"><img src="./images/fractal-dadras-thumbnail.jpg" /><span>Dadras</span></a></div>
+                    <div><a href="fractal-dejong.html" class="image-link"><img src="./images/fractal-dejong-thumbnail.jpg" /><span>DeJong</span></a></div>
+                    <div><a href="fractal-duffing.html" class="image-link"><img src="./images/fractal-duffing-thumbnail.jpg" /><span>Duffing</span></a></div>
+                    <div><a href="fractal-fourwing.html" class="image-link"><img src="./images/fractal-fourwing-thumbnail.jpg" /><span>Four-Wing</span></a></div>
+                    <div><a href="fractal-gingerbread-man.html"  class="image-link"><img src="./images/fractal-gingerbreadman-thumbnail.jpg" /><span>Gingerbread Man</span></a></div>
+                    <div><a href="fractal-gumowski-mira.html" class="image-link"><img src="./images/fractal-gumowskimira-thumbnail.jpg" /><span>Gumowski-Mira</span></a></div>
+                    <div><a href="fractal-halvorsen.html"  class="image-link"><img src="./images/fractal-halvorsen-thumbnail.jpg" /><span>Halvorsen</span></a></div>
+                    <div><a href="fractal-henon.html"  class="image-link"><img src="./images/fractal-henon-thumbnail.jpg" /><span>Henon</span></a></div>
+                    <div><a href="fractal-hopalong.html"  class="image-link"><img src="./images/fractal-hopalong-thumbnail.jpg" /><span>Hopalong</span></a></div>
+                    <div><a href="fractal-hopalong2.html"  class="image-link"><img src="./images/fractal-hopalong2-thumbnail.jpg" /><span>Hopalong2</span></a></div>
+                    <div><a href="fractal-ikeda.html"  class="image-link"><img src="./images/fractal-ikeda-thumbnail.jpg" /><span>Ikeda</span></a></div>
+                    <div><a href="fractal-kaneko1.html"  class="image-link"><img src="./images/fractal-kaneko1-thumbnail.jpg" /><span>Kaneko 1</span></a></div>
+                    <div><a href="fractal-kings-dream.html"  class="image-link"><img src="./images/fractal-kingsdream-thumbnail.jpg" /><span>King's&nbsp;Dream</span></a></div>
+                    <div><a href="fractal-langford.html"  class="image-link"><img src="./images/fractal-langford-thumbnail.jpg" /><span>Langford</span></a></div>
+                    <div><a href="fractal-lorenz83.html"  class="image-link"><img src="./images/fractal-lorenz83-thumbnail.jpg" /><span>Lorenz&nbsp;83</span></a></div>
+                    <div><a href="fractal-lorenz.html"  class="image-link"><img src="./images/fractal-lorenz-thumbnail.jpg" /><span>Lorenz</span></a></div>
+                    <div><a href="fractal-lotka-volterra.html"  class="image-link"><img src="./images/fractal-lotka_volterra-thumbnail.jpg" /><span>Lotka Volterra</span></a></div>
+<!--                    <div><a href="fractal-metz.html"  class="image-link"><img src="./images/fractal-metz-thumbnail.jpg" /><span>Metz</span></a></div> -->
+                    <div><a href="fractal-pickover.html"  class="image-link"><img src="./images/fractal-pickover-thumbnail.jpg" /><span>Pickover</span></a></div>
+                    <div><a href="fractal-pickover2.html"  class="image-link"><img src="./images/fractal-pickover2-thumbnail.jpg" /><span>Pickover2</span></a></div>
+                    <div><a href="fractal-rabinovich-fabrikant.html"  class="image-link"><img src="./images/fractal-rabinovich_fabrikant-thumbnail.jpg" /><span>Rabinovich</span></a></div>
+                    <div><a href="fractal-rossler.html"  class="image-link"><img src="./images/fractal-rossler-thumbnail.jpg" /><span>Rossler</span></a></div>
+                    <div><a href="fractal-sprott.html"  class="image-link"><img src="./images/fractal-sprott-thumbnail.jpg" /><span>Sprott</span></a></div>
+                    <div><a href="fractal-strick.html"  class="image-link"><img src="./images/fractal-strick-thumbnail.jpg" /><span>Strick</span></a></div>
+                    <div><a href="fractal-svensson.html"  class="image-link"><img src="./images/fractal-svensson-thumbnail.jpg" /><span>Svensson</span></a></div>
+                    <div><a href="fractal-thomas.html"  class="image-link"><img src="./images/fractal-thomas-thumbnail.jpg" /><span>Thomas</span></a></div>
+                    <div><a href="fractal-tinkerbell.html"  class="image-link"><img src="./images/fractal-tinkerbell-thumbnail.jpg" /><span>Tinkerbell</span></a></div>
+<!--           
+RAP: This is generally presented as an escape time fractal and is a low priority for this list
+                     <tr>
+                    <div><a href="fractal-bogdanov.html"  class="image-link"><img src="./images/fractal-bogdanov-thumbnail.jpg" />Bogdanov</a></div>
+                    <div>2</div>
                 </tr>
-                <tr>
-                    <td>Bedhead</td><td>2</td>
-                </tr>
-                <tr>
-                    <td>Bogdanov</td><td>2</td>
-                </tr>
-                <tr>
-                    <td>Chen</td>
-                </tr>
-                <tr>
-                    <td>Chua 2</td>
-                </tr>
-                <tr>
-                    <td>Chua</td>
-                </tr>
-                <tr>
-                    <td>Dadras</td>
-                </tr>
-                <tr>
-                    <td>DeJong</td>
-                </tr>
-                <tr>
-                    <td>Duffing</td>
-                </tr>
-                <tr>
-                    <td>Four-Wing</td>
-                </tr>
-                <tr>
-                    <td>Gingerbread Man</td>
-                </tr>
-                <tr>
-                    <td>Gumowski-Mira</td>
-                </tr>
-                <tr>
-                    <td>Halvorsen</td>
-                </tr>
-                <tr>
-                    <td>Henon</td>
-                </tr>
-                <tr>
-                    <td>Hopalong</td>
-                </tr>
-                <tr>
-                    <td>Hopalong2</td>
-                </tr>
-                <tr>
-                    <td>Ikeda</td>
-                </tr>
-                <tr>
-                    <td>Kaneko 1</td>
-                </tr>
-                <tr>
-                    <td>King's Dream</td>
-                </tr>
-                <tr>
-                    <td>Lorenz 83</td>
-                </tr>
-                <tr>
-                    <td>Lorenz</td>
-                </tr>
-                <tr>
-                    <td>Lotka Volterra</td>
-                </tr>
-                <tr>
-                    <td>Metz</td>
-                </tr>
-                <tr>
-                    <td>Pickover</td>
-                </tr>
-                <tr>
-                    <td>Pickover2</td>
-                </tr>
-                <tr>
-                    <td>Rabinovich</td>
-                </tr>
-                <tr>
-                    <td>Sprott</td>
-                </tr>
-                <tr>
-                    <td>Strick</td>
-                </tr>
-                <tr>
-                    <td>Svensson</td>
-                </tr>
-                <tr>
-                    <td>Thomas</td>
-                </tr>
-                <tr>
-                    <td>Tinkerbell</td>
-                </tr>
-            </table>
-
-    <script>function resetlist() {
-  var buttons = document.getElementsByClassName("listinput");
-  [].map.call(buttons, button => {button.checked = false;});
-}</script>
-    <div class="filterbar-wrapper">
-        <button id="findbutton" class="filterbar-button">Find</button>
-        <button id="mapbutton" class="filterbar-button">Map</button>
-        <button id="reset" type="button" class="filterbar-button" onclick="resetlist()">Reset</button>
-    </div> <!-- filterbar wrapper -->
-
+            -->                
+</div>
     </div> <!-- end main wrapper -->
-
-    <footer class="footer-wrapper"></footer>
-
-    <script>// register button press events</script>
-
 </body>
 </html>
