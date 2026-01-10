@@ -1,3 +1,9 @@
+/*
+
+travel-specific classes
+
+*/
+
 .travel-box {
   display: flex;
   flex-wrap: wrap;
