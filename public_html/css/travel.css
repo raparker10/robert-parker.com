@@ -1,0 +1,18 @@
+.travel-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}    
+
+.travel-box  img {
+    width: 100%;
+    height: auto;
+    border: 5px solit #000000;
+    max-width: 512px;
+    align-items: center;
+    margin: 10px;
+    flex-grow: 0;
+    padding: 5px;
+    border-radius: 8px;
+    min-width: 0;
+}

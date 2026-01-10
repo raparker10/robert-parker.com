@@ -1,0 +1,21 @@
+body {
+    background-color: white;
+/*    font: normal 100% Helvetica, Arial, sans-serif; */
+    font-family: Candara, Geneva, Consolas, Calibri, "Monaco", "Lucida Console", "GaramondPro", "Robato", Verdana, Helvetica, Courier, sans-serif
+
+}
+h1 {
+    font-size: 1.5em;
+/*    color: darkred; */
+    text-align: center;
+}
+h2 {
+    font-size: 1.25em;
+/*    color: darkred;
+    text-decoration: underline wavy;
+*/
+}
+h3 {
+    font-size: 1em;
+/*    color: darkred; */
+}
