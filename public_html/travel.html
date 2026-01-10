@@ -6,108 +6,135 @@
     <meta name="description" content="List of recent travel locations.">
     <meta name="keywords" content="travel, hiking, trekking, adventure">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/robertparkersat.css">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
     <link rel="icon" sizes="32x32" type="image/png" href="./images/robert-parker.png">
     <title>Travel</title>
 <style>
-    .map-button-active {
-        background-color: cyan;
-        border-style: inset; /*  inset; */
-        border-width: 3px;
-    }
 
-    .banner-visible {
-        display: block;
-    }
 
-    td.center-content {
-        vertical-align: top;
-        text-align: left;
-    }
-        .image-link {
-    /* This makes the entire container a block and clickable */
-    display: block;
-    /* Centers the content horizontally */
-    text-align: center;
-    /* Optional: Adds some space around the entire link */
-    margin: 10px;
-    /* Optional: Remove default link underline from text */
-    text-decoration: none; 
-    color: black;
-    }
-
-    .image-link img {
-    /* Makes the image behave like a block element, forcing the next element to a new line */
-    display: block;
-    margin: 0 auto; /* Centers the image if it's smaller than the anchor width */
-    /* Optional: Add space below the image */
-    margin-bottom: 5px;
-    /* Optional: Set max width for responsiveness */
-    max-width: 100%;
-    }
-.image-link img:hover {
-    transform: scale(1.025);
-}
-    .image-link span {
-    /* Optional: Styles the text */
-    font-size: 16px;
-    font-family: sans-serif;
-    }    
-.box > * {
-/*  border: 2px solid rgb(96 255 168); */
-  border-radius: 5px;
-/*  background-color: rgb(96 139 255); */
-  align-items: center;
-  margin: 0.5em;
-  /* flex: 1 1 0px; */
-  flex-grow: 0;
-}
-
-.box {
-/*  border: 2px dotted rgb(255 139 168); */
+.trip-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items:flex-start
 }    
+
+.trip-box a {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    text-decoration: none;
+    color: black;    
+}
+
+.trip-box img {
+    display: block;
+    margin: 10px; /* auto; */
+    max-width: 100%;    
+    width: 480px;
+    height: auto;
+}
+
+.trip-box img:hover {
+    transform: scale(1.025);
+}
+
+.trip-box span {
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
 
 </style>
 </head>
 <body>
     <noscript>Javascript is required.</noscript>
 
-    <figure id="bannerID" class="banner-wrapper">
+    <figure id="bannerID">
         <a href="./index.html">
-        <picture id="image-1" class="banner-item banner-visible">
+        <picture>
             <source media="(max-width: 640px)" srcset="./images/header-narrow.jpg" />
             <source media="(max-width: 896px)" srcset="./images/header-medium.jpg" />
             <img width="100%" height="64px" src="./images/header-wide.jpg" alt="Pickover Attractor" />
         </picture>
     </a>
-<div class="box">
-                    <div><a href="travel-new-york-city-2025.html" class="image-link"><img src="./images/travel-new-york-city-2025-thumbnail.jpg" /><span>New&nbsp;York&nbsp;City 2025</span></a></div>
-                    <div><a href="travel-big-bend-2025.html" class="image-link"><img src="./images/travel-big-bend-2025-thumbnail.jpg" /><span>Big&nbsp;Bend 2025</span></a></div>
-                    <div><a href="travel-tmb-2025.html" class="image-link"><img src="./images/travel-tmb-2025-thumbnail.jpg" /><span>Tour du Mont Blanc 2025</span></a></div>
-                    <div><a href="travel-nepal-2025.html" class="image-link"><img src="./images/travel-nepal-2025-thumbnail.jpg" /><span>Nepal 2025</span></a></div>
-                    <div><a href="travel-italy-av2-2024.html" class="image-link"><img src="./images/travel-av2-2024-thumbnail.jpg" /><span>Alta&nbsp;Via&nbsp;2 2024</span></a></div>
-                    <div><a href="travel-guadalupe-peak-2024.html" class="image-link"><img src="./images/travel-guadalupe-peak-2024-thumbnail.jpg" /><span>Guadalupe Peak 2024</span></a></div>
-                    <div><a href="travel-grand_canyon-r2r2r-2024.html" class="image-link"><img src="./images/travel-grand-canyon-r2r2r-2024-thumbnail.jpg" /><span>Grand Canyon R2R2R 2024</span></a></div>
-                    <div><a href="travel-nepal-2024.html" class="image-link"><img height="128px" src="./images/travel-nepal-2024-thumbnail.jpg" /><span>Nepal 2024</span></a></div>
-                    <div><a href="travel-nepal-2023.html" class="image-link"><img height="128px" src="./images/travel-nepal-2023-thumbnail.jpg" /><span>Nepal 2023</span></a></div>
-                    <div><a href="travel-haute-route-2023.html" class="image-link"><img src="./images/travel-haute-route-2023-thumbnail.jpg" /><span>Haute Route 2023</span></a></div>
-                    <div><a href="travel-italy-fassa-dolomites-2023.html" class="image-link"><img src="./images/travel-italy-fassa-dolomites-2023-thumbnail.jpg" /><span>Fassa&nbsp;Dolomites 2023</span></a></div>
-                    <div><a href="travel-italy-2023.html" class="image-link"><img src="./images/travel-italy-tour-2023-thumbnail.jpg" /><span>Italy 2023</span></a></div>
-                    <div><a href="travel-peru-2022.html" class="image-link"><img src="./images/travel-peru-2022-thumbnail.jpg" /><span>Peru 2022</span></a></div>
-                    <div><a href="travel-san-diego-2022.html" class="image-link"><img src="./images/travel-san-diego-2022-thumbnail.jpg" /><span>San&nbsp;Diego 2022</span></a></div>
-                    <div><a href="travel-pagosa-springs-2022.html" class="image-link"><img src="./images/travel-pagosa-springs-2022-thumbnail.jpg" /><span>Colorado 2022</span></a></div>
-                    <div><a href="travel-san-francisco-2022.html" class="image-link"><img src="./images/travel-san-francisco-2022-thumbnail.jpg" /><span>San&nbsp;Francisco 2022</span></a></div>
-                    <div><a href="travel-pacific-coast-highway-2020.html" class="image-link"><img src="./images/travel-pacific-coast-highway-2020-thumbnail.jpg" /><span>PCH 2020</span></a></div>
-                    <div><a href="travel-southwest-2019.html" class="image-link"><img src="./images/travel-southwest-2020-thumbnail.jpg" /><span>Southwest&nbsp;USA 2019</span></a></div>
-                    <div><a href="travel-smoky-mountains-2019.html" class="image-link"><img src="./images/travel-smoky-mountains-2019-thumbnail.jpg" /><span>Smoky Mountains 2019</span></a></div>
-                    <div><a href="travel-zion-2019.html" class="image-link"><img src="./images/travel-zion-2019-thumbnail.jpg" /><span>Zion 2019</span></a></div>
-                    <div><a href="travel-portland-2019.html" class="image-link"><img src="./images/travel-portland-2019-thumbnail.jpg" /><span>Portland 2019</span></a></div>
-                    <div><a href="travel-san-francisco-2019.html" class="image-link"><img src="./images/travel-san-francisco-2019-thumbnail.jpg" /><span>San&nbsp;Francisco 2019</span></a></div>
-                    <div><a href="travel-seattle-2019.html" class="image-link"><img src="./images/travel-seattle-2019-thumbnail.jpg" /><span>Seattle 2019</span></a></div>
-                    <div><a href="travel-sky-island-2019.html" class="image-link"><img src="./images/travel-sky-island-2019-thumbnail.jpg" /><span>Sky&nbsp;Island 2019</span></a></div>
+<div class="trip-box">
+    <div>
+        <a href="travel-new-york-city-2025.html">
+        <picture>
+            <source media="(max-width: 384px)" srcset="./images/travel-new-york-city-2025-thumbnail.jpg"/>
+            <img src="./images/travel-new-york-city-2025-large-thumbnail.jpg"/>
+        </picture>
+        <span>New&nbsp;York&nbsp;City 2025</span>
+        </a>
+
+    </div>
+
+    <div>
+        <a href="travel-big-bend-2025.html">
+        <picture>
+            <source media="(max-width: 384px)" srcset="./images/travel-big-bend-2025-thumbnail.jpg"/>
+            <img src="./images/travel-big-bend-2025-large-thumbnail.jpg"/>
+        </picture>
+        <span>Big Bend  2025</span>
+
+    </div>
+    
+    <div>
+        <a href="travel-tmb-2025.html">
+        <picture>
+            <source media="(max-width: 384px)" srcset="./images/travel-tmb-2025-thumbnail.jpg"/>
+            <img src="./images/travel-tmb-2025-large-thumbnail.jpg"/>
+        </picture>
+        <span>Tour du Mont Blanc 2025</span>
+        </a>
+    </div>
+
+    <div>
+        <a href="travel-nepal-2025.html">
+        <picture>
+            <source media="(max-width: 384px)" srcset="./images/travel-nepal-2025-thumbnail.jpg"/>
+            <img src="./images/travel-nepal-2025-large-thumbnail.jpg"/>
+        </picture>
+        <span>Nepal 2025</span></a></div>
+
+    <div>
+        <a href="travel-italy-av2-2024.html">
+        <picture>
+            <source media="(max-width: 384px)" srcset="./images/travel-av2-2024-thumbnail.jpg"/>
+            <img src="./images/travel-av2-2024-large-thumbnail.jpg"/>
+        </picture>
+        <span>Alta&nbsp;Via&nbsp;2 2024</span>
+        </a>
+    </div>
+
+    <div>
+        <a href="travel-guadalupe-peak-2024.html">
+        <picture>
+            <source media="(max-width: 384px)" srcset="./images/travel-guadalupe-peak-2024-thumbnail.jpg"/>
+            <img src="./images/travel-guadalupe-peak-2024-large-thumbnail.jpg"/>
+        </picture>
+        <span>Guadalupe Peak 2024</span>
+    </a>
+</div>
+    <div><a href="travel-grand_canyon-r2r2r-2024.html"><img src="./images/travel-grand-canyon-r2r2r-2024-thumbnail.jpg" /><span>Grand Canyon R2R2R 2024</span></a></div>
+    <div><a href="travel-nepal-2024.html"><img height="128px" src="./images/travel-nepal-2024-thumbnail.jpg" /><span>Nepal 2024</span></a></div>
+    <div><a href="travel-nepal-2023.html"><img height="128px" src="./images/travel-nepal-2023-thumbnail.jpg" /><span>Nepal 2023</span></a></div>
+    <div><a href="travel-haute-route-2023.html"><img src="./images/travel-haute-route-2023-thumbnail.jpg" /><span>Haute Route 2023</span></a></div>
+    <div><a href="travel-italy-fassa-dolomites-2023.html"><img src="./images/travel-italy-fassa-dolomites-2023-thumbnail.jpg" /><span>Fassa&nbsp;Dolomites 2023</span></a></div>
+    <div><a href="travel-italy-2023.html"><img src="./images/travel-italy-tour-2023-thumbnail.jpg" /><span>Italy 2023</span></a></div>
+    <div><a href="travel-peru-2022.html"><img src="./images/travel-peru-2022-thumbnail.jpg" /><span>Peru 2022</span></a></div>
+    <div><a href="travel-san-diego-2022.html"><img src="./images/travel-san-diego-2022-thumbnail.jpg" /><span>San&nbsp;Diego 2022</span></a></div>
+    <div><a href="travel-pagosa-springs-2022.html"><img src="./images/travel-pagosa-springs-2022-thumbnail.jpg" /><span>Colorado 2022</span></a></div>
+    <div><a href="travel-san-francisco-2022.html"><img src="./images/travel-san-francisco-2022-thumbnail.jpg" /><span>San&nbsp;Francisco 2022</span></a></div>
+    <div><a href="travel-pacific-coast-highway-2020.html"><img src="./images/travel-pacific-coast-highway-2020-thumbnail.jpg" /><span>PCH 2020</span></a></div>
+    <div><a href="travel-southwest-2019.html"><img src="./images/travel-southwest-2020-thumbnail.jpg" /><span>Southwest&nbsp;USA 2019</span></a></div>
+    <div><a href="travel-smoky-mountains-2019.html"><img src="./images/travel-smoky-mountains-2019-thumbnail.jpg" /><span>Smoky Mountains 2019</span></a></div>
+    <div><a href="travel-zion-2019.html"><img src="./images/travel-zion-2019-thumbnail.jpg" /><span>Zion 2019</span></a></div>
+    <div><a href="travel-portland-2019.html"><img src="./images/travel-portland-2019-thumbnail.jpg" /><span>Portland 2019</span></a></div>
+    <div><a href="travel-san-francisco-2019.html"><img src="./images/travel-san-francisco-2019-thumbnail.jpg" /><span>San&nbsp;Francisco 2019</span></a></div>
+    <div><a href="travel-seattle-2019.html"><img src="./images/travel-seattle-2019-thumbnail.jpg" /><span>Seattle 2019</span></a></div>
+    <div><a href="travel-sky-island-2019.html"><img src="./images/travel-sky-island-2019-thumbnail.jpg" /><span>Sky&nbsp;Island 2019</span></a></div>
 </div>
     </div> <!-- end main wrapper -->
 </body>

@@ -19,3 +19,35 @@ h3 {
     font-size: 1em;
 /*    color: darkred; */
 }
+
+.image-link {
+    /* This makes the entire container a block and clickable */
+    display: block;
+    /* Centers the content horizontally */
+    text-align: center;
+    /* Optional: Adds some space around the entire link */
+    margin: 10px;
+    /* Optional: Remove default link underline from text */
+    text-decoration: none; 
+    color: black;
+}
+
+.image-link img {
+    /* Makes the image behave like a block element, forcing the next element to a new line */
+    display: block;
+    margin: 0 auto; /* Centers the image if it's smaller than the anchor width */
+    /* Optional: Add space below the image */
+    margin-bottom: 5px;
+    /* Optional: Set max width for responsiveness */
+    max-width: 100%;
+}
+
+.image-link img:hover {
+    transform: scale(1.025);
+}
+
+.image-link span {
+    /* Optional: Styles the text */
+    font-size: 16px;
+    font-family: sans-serif;
+}    
