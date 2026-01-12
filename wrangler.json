@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "my-first-worker",
+  "name": "robertparkersatx",
   "compatibility_date": "2025-08-23",
   "assets": {
     "directory": "./public_html"

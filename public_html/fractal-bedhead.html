@@ -7,57 +7,13 @@
     <meta name="keywords" content="bedhead, fractal, math, chaos, attractor">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <link rel="stylesheet" type="text/css" href="./css/fractal.css">
     <link rel="icon" sizes="32x32" type="image/png" href="./images/fractal-bedhead-thumbnail.jpg">
     <title>Bedhead Fractal</title>
 <style>
-    .map-button-active {
-        background-color: cyan;
-        border-style: inset; /*  inset; */
-        border-width: 3px;
-    }
-
-    .banner-visible {
-        display: block;
-    }
-
-    td.center-content {
-        vertical-align: top;
-        text-align: left;
-    }
-    .image-link {
-    /* This makes the entire container a block and clickable */
-    display: block;
-    /* Centers the content horizontally */
-    text-align: center;
-    /* Optional: Adds some space around the entire link */
-    margin: 10px;
-    /* Optional: Remove default link underline from text */
-    text-decoration: none; 
-    color: black;
-    }
-
-    .image-link img {
-    /* Makes the image behave like a block element, forcing the next element to a new line */
-    display: block;
-    margin: 0 auto; /* Centers the image if it's smaller than the anchor width */
-    /* Optional: Add space below the image */
-    margin-bottom: 5px;
-    /* Optional: Set max width for responsiveness */
-    max-width: 100%;
-    }
-
-    .image-link span {
-    /* Optional: Styles the text */
-    font-size: 16px;
-    font-family: sans-serif;
-    }    
-.flex-container { 
-    display: flex; /* Activates Flexbox for the container */
-    justify-content: center; /* Centers items along the main (horizontal) axis */
-    }    
-
 </style>
 </head>
+
 <body>
     <figure id="bannerID" class="banner-wrapper">
         <a href="./fractals.html">
@@ -68,18 +24,7 @@
         </picture>
     </a>
 
-        <!-- Top menu options -->
-        <nav class="topnav-wrapper" id="topnavwrapperID">
-            <a href="./index.html" class="topnav-item active">Home</a>
-            <a href="./travel.html" class="topnav-item active">Travel</a>
-            <a href="./computing.html" class="topnav-item active">Computing</a>
-            <a href="./photography.html" class="topnav-item active">Photography</a>
-            <a href="./fractals.html" class="topnav-item-right">Fractals</a>
-        </nav> <!-- end topnav wrapper-->
     </figure>
-        <div class="header-spacer"></div>
-
-        <div class="main-wrapper"></div>
 
 <h1>Bedhead Attractor</h1>
 <p>The beadhead attractor is a 2-dimensional strange attractor produced by the following equation:</p>
@@ -95,13 +40,11 @@
                     <mi>x</mi>
                     <mi>n</mi>
                 </msub> 
-                    <!-- <mo>*</mo> -->
                     <msub><mi>y</mi><mi>n</mi></msub>
                 </mrow>
                 <mi>b</mi>                    
             </mfrac>
             <mo>)</mo>
-            <!-- <mo>*</mo> -->
             <msub>
                 <mi>y</mi>
                 <mi>n</mi>
@@ -109,7 +52,6 @@
             <mo>+</mo> 
             <mi>cos</mi>
             <mo>(</mo><mi>a</mi> 
-            <!-- <mo>*</mo>  -->
             <msub><mi>x</mi><mi>n</mi></msub> <mo>-</mo> <msub><mi>y</mi><mi>n</mi></msub><mo>)</mo>
 
     </mrow>
@@ -122,9 +64,10 @@
     </msub> 
     <mo>=</mo><msub><mi>x</mi><mi>n</mi></msub> <mo>+</mo><mfrac><mrow><mo>sin</mo><mo>(</mo><msub><mi>y</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>b</mo></mfrac>
 </math>
-<div class="fractal-image-container">
 
-<img src="./images/fractal-bedhead-01.jpg"  alt="Bedhead fractal">
+<div class="fractal-image-container">
+    <img src="./images/fractal-bedhead-01.jpg"  alt="Bedhead fractal">
 </div>
+
 </body>
 </html>
