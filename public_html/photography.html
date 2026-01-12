@@ -3,100 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Robert Parker">
-    <meta name="description" content="Computing projects.">
+    <meta name="description" content="Photography projects">
     <meta name="keywords" content="photography">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/robertparkersat.css">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <link rel="stylesheet" type="text/css" href="./css/photography.css">
     <link rel="icon" sizes="32x32" type="image/png" href="./images/robert-parker.png">
     <title>Photography</title>
 <style>
-    .map-button-active {
-        background-color: cyan;
-        border-style: inset; /*  inset; */
-        border-width: 3px;
-    }
-
-    .banner-visible {
-        display: block;
-    }
-
-    td.center-content {
-        vertical-align: top;
-        text-align: left;
-    }
-        .image-link {
-    /* This makes the entire container a block and clickable */
-    display: block;
-    /* Centers the content horizontally */
-    text-align: center;
-    /* Optional: Adds some space around the entire link */
-    margin: 10px;
-    /* Optional: Remove default link underline from text */
-    text-decoration: none; 
-    color: black;
-    }
-
-    .image-link img {
-    /* Makes the image behave like a block element, forcing the next element to a new line */
-    display: block;
-    margin: 0 auto; /* Centers the image if it's smaller than the anchor width */
-    /* Optional: Add space below the image */
-    margin-bottom: 5px;
-    /* Optional: Set max width for responsiveness */
-    max-width: 100%;
-    }
-.image-link img:hover {
-    transform: scale(1.025);
-}
-    .image-link span {
-    /* Optional: Styles the text */
-    font-size: 16px;
-    font-family: sans-serif;
-    }    
-.box > * {
-/*  border: 2px solid rgb(96 255 168); */
-  border-radius: 5px;
-/*  background-color: rgb(96 139 255); */
-  align-items: center;
-  margin: 0.5em;
-  /* flex: 1 1 0px; */
-  flex-grow: 0;
-}
-
-.box {
-/*  border: 2px dotted rgb(255 139 168); */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}    
 
 </style>
 </head>
 <body>
-    <figure id="bannerID" class="banner-wrapper">
+    <figure>
         <a href="./index.html">
-        <picture id="image-1" class="banner-item banner-visible">
+        <picture>
             <source media="(max-width: 640px)" srcset="./images/header-narrow.jpg" />
             <source media="(max-width: 896px)" srcset="./images/header-medium.jpg" />
             <img width="100%" height="64px" src="./images/header-wide.jpg" alt="Pickover Attractor" />
         </picture>
     </a>
-        <!-- Top menu options -->
-        <nav class="topnav-wrapper" id="topnavwrapperID">
-            <a href="./index.html" class="topnav-item active">Home</a>
-            <a href="./travel.html" class="topnav-item active">Travel</a>
-            <a href="./fractals.html" class="topnav-item-right">Fractals</a>
-            <a href="./photography.html" class="topnav-item-right">Photography</a>
-            <a href="./math.html" class="topnav-item-right">Math</a>
-            <a href="./computing.html" class="topnav-item-right">Computing</a>
-        </nav> <!-- end topnav wrapper-->
-    </figure>
+
+</figure>
         <div class="header-spacer"></div>
 
-        <div class="main-wrapper">
-<div class="box">
-                    <div><a href="photography.html" class="image-link"><img src="./images/travel-new-york-city-2025-thumbnail.jpg" /><span>Under Construction</span></a></div>
+<div class="photography-box">
+    <div>
+        <a href="photography.html">
+            <img src="./images/main-photography.jpg" />
+            <span>Under Construction</span>
+        </a>
+    </div>
 </div>
-    </div> <!-- end main wrapper -->
+
 </body>
 </html>
