@@ -1,3 +1,39 @@
+.fractal-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  text-align:center;
+}    
+
+.fractal-box div {
+    width: 100%;
+}
+.fractal-box  img {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    height: auto;
+    align-items: center;
+    flex-grow: 1 1 100%;
+    padding: 5px;
+    min-width: 0;
+    max-width: 90%;
+}
+
+.fractal-box span {
+    font-size: 16px;
+    font-family: sans-serif;
+}    
+
+
+.fractal-box-link span {
+    font-size: 16px;
+    font-family: sans-serif;
+    }    
+
+
+
 .fractals-box {
   display: flex;
   flex-wrap: wrap;
