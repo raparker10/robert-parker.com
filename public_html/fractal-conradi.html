@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Robert Parker">
+    <meta name="description" content="Conradi equation">
+    <meta name="keywords" content="dadras, fractal, math, chaos, attractor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <link rel="stylesheet" type="text/css" href="./css/fractal.css">
+    <link rel="icon" sizes="32x32" type="image/png" href="./images/fractal-bedhead-thumbnail.jpg">
+    <title>Conradi Map</title>
+<style>
+</style>
+</head>
+<body>
+    <figure id="bannerID" class="banner-wrapper">
+        <a href="./fractals.html">
+        <picture id="image-1" class="banner-item banner-visible">
+            <source media="(max-width: 640px)" srcset="./images/header-narrow.jpg" />
+            <source media="(max-width: 896px)" srcset="./images/header-medium.jpg" />
+            <img src="./images/header-wide.jpg" width="100%" height="64" alt="Pickover Attractor" />
+        </picture>
+        </a>
+    </figure>
+<h1>Conradi Map</h1>
+<p>The Conradi Map is a 2-dimensional system with the following equation:</p>
+
+<math display="block">
+    <mrow>
+        <msub><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo>
+            <mo>sin</mo><mo>(</mo><msubsup><mi>x</mi><mi>n</mi><mn>2</mn></msubsup>
+                <mo>-</mo><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup>
+                <mo>+</mo><mi>a</mi><mo>)</mo>
+    </mrow>
+</math>
+<math display="block">
+    <mrow>
+        <msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo>
+            <mo>cos</mo><mo>(</mo><mn>2</mn><msub><mi>x</mi><mi>n</mi></msub><msub><mi>y</mi><mi>n</mi></msub>
+                <mo>+</mo><mi>b</mi><mo>)</mo>
+    </mrow>
+</math>
+
+<div class="fractal-box">
+<div><img src="./images/fractal-conradi-original-01.jpg"  alt="Conradi Map"></dev>
+<div><img src="./images/fractal-conradi_ld_original-01.jpg"  alt="Conradi Map as Lagrangian Descriptor"></dev>
+<div><img src="./images/fractal-conradi-ag-ld-01.gif"  alt="Conradi Map animated over a range of parameters"></dev>
+
+</div>
+
+</body>
+</html>
