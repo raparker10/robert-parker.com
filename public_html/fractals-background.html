@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Robert Parker">
+    <meta name="description" content="Background and Rationale">
+    <meta name="keywords" content="fractal, math, chaos, attractor, resources">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <link rel="stylesheet" type="text/css" href="./css/fractal.css">
+    <link rel="icon" sizes="32x32" type="image/png" href="./images/robert-parker.png">
+    <title>Fractals</title>
+<style>
+    .image-link {
+    /* This makes the entire container a block and clickable */
+    display: block;
+    /* Centers the content horizontally */
+    text-align: center;
+    /* Optional: Adds some space around the entire link */
+    margin: 10px;
+    /* Optional: Remove default link underline from text */
+    text-decoration: none; 
+    color: black;
+    }
+
+    .image-link img {
+    /* Makes the image behave like a block element, forcing the next element to a new line */
+    display: block;
+    margin: 0 auto; /* Centers the image if it's smaller than the anchor width */
+    /* Optional: Add space below the image */
+    margin-bottom: 5px;
+    /* Optional: Set max width for responsiveness */
+    max-width: 100%;
+    }
+.image-link img:hover {
+    transform: scale(1.25);
+}
+    .image-link span {
+    /* Optional: Styles the text */
+    font-size: 16px;
+    font-family: sans-serif;
+    }    
+.box > * {
+/*  border: 2px solid rgb(96 255 168); */
+  border-radius: 5px;
+/*  background-color: rgb(96 139 255); */
+  align-items: center;
+  margin: 0.5em;
+  /* flex: 1 1 0px; */
+  flex-grow: 0;
+}
+
+.box {
+/*  border: 2px dotted rgb(255 139 168); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}    
+</style>
+</head> 
+<body>
+
+    <figure id="bannerID" class="banner-wrapper">
+        <a href="./index.html">
+            <picture id="image-1" class="banner-item banner-visible">
+            <source media="(max-width: 640px)" srcset="./images/header-narrow.jpg" />
+            <source media="(max-width: 896px)" srcset="./images/header-medium.jpg" />
+            <img width="100%" height="64px" src="./images/header-wide.jpg" alt="Pickover Attractor" />
+        </picture>
+    </a>
+    </figure>
+<p>
+So why all these images?  Beyond a casual interest in nonlinear systems, I use fractals as toy problems for exploring the performance of compute platforms.  
+<br>They provide a variety of challenges to demonstrate:
+<ul>
+<li>Single-thread performance</li>
+<li>Parallel performance</li>
+<li>Interprocess communication </li>
+<li>Memory system performance</li>
+<li>Impact of code branches</li>
+<li>Numerical precision</li>
+</ul>
+</P>
+
+<p>
+My early fractals were programmed on a MOS 6502 in assembly language.  This device lacked floating point and a multiply instruction, which made it a challenging starting point - especially for transcendental functions.
+Over the years, these tests transitioned to Intel 8086, 8087, MMX, SSE, SSE2, AVX, and AVX2 (sadly, I've not been able to use AVX512).  
+</p>
+<p>
+GPU compute has afforded a 10-100x performance improvement in my personal experimentation in this area, especially for algorithms which are easily parallelized.  
+Even for those which are single-threaded by nature, the abilty to avoid transferring a computed image across a bus to the video hardware can significantly speed up the process.
+</p>
+<p>
+Of course there are challenges to GPU compute as well.
+<ul>
+    <li>Complexity of using the platform, unless simplifying with PyTorch, CUDA, or similar</li>
+    <li>Poor performance of double-precision floating point numbers</li>
+    <li>Hybrid techniques / interventions needed to incorporate double-precision (e.g. offload to CPU threads)</li>
+</ul>
+</p>
+<P>
+So my general approach is to create a plug-in architecture that generates images at "interactive" frame rates, usually 10-60 per second.  This limits options for artistic treatment of the images, and thus they are rather plain.
+This approach does lend itself to making videos, so that's generally where I spend my time.  After all, it is the dynamics of these systems that are interesting (at least to me) so video works well.
+</p>
+</body>
+</html>
