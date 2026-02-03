@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Robert Parker">
+    <meta name="description" content="Fractal Resources">
+    <meta name="keywords" content="fractal, math, chaos, attractor, resources">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <link rel="stylesheet" type="text/css" href="./css/fractal.css">
+    <link rel="icon" sizes="32x32" type="image/png" href="./images/robert-parker.png">
+    <title>Fractals</title>
+<style>
+    .image-link {
+    /* This makes the entire container a block and clickable */
+    display: block;
+    /* Centers the content horizontally */
+    text-align: center;
+    /* Optional: Adds some space around the entire link */
+    margin: 10px;
+    /* Optional: Remove default link underline from text */
+    text-decoration: none; 
+    color: black;
+    }
+
+    .image-link img {
+    /* Makes the image behave like a block element, forcing the next element to a new line */
+    display: block;
+    margin: 0 auto; /* Centers the image if it's smaller than the anchor width */
+    /* Optional: Add space below the image */
+    margin-bottom: 5px;
+    /* Optional: Set max width for responsiveness */
+    max-width: 100%;
+    }
+.image-link img:hover {
+    transform: scale(1.25);
+}
+    .image-link span {
+    /* Optional: Styles the text */
+    font-size: 16px;
+    font-family: sans-serif;
+    }    
+.box > * {
+/*  border: 2px solid rgb(96 255 168); */
+  border-radius: 5px;
+/*  background-color: rgb(96 139 255); */
+  align-items: center;
+  margin: 0.5em;
+  /* flex: 1 1 0px; */
+  flex-grow: 0;
+}
+
+.box {
+/*  border: 2px dotted rgb(255 139 168); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}    
+</style>
+</head> 
+<body>
+
+    <figure id="bannerID" class="banner-wrapper">
+        <a href="./index.html">
+            <picture id="image-1" class="banner-item banner-visible">
+            <source media="(max-width: 640px)" srcset="./images/header-narrow.jpg" />
+            <source media="(max-width: 896px)" srcset="./images/header-medium.jpg" />
+            <img width="100%" height="64px" src="./images/header-wide.jpg" alt="Pickover Attractor" />
+        </picture>
+    </a>
+    </figure>
+    
+<ul>    
+<li><a href="https://www.danieleweeks.com/mathart/">Daniel Weeks - Math Art</a>: List of projects and source code.</li>
+<li><a href="https://sequelaencollection.home.blog/">The Sequelaen Collection</a>: excellent list of math art projects and technical information.</li>
+<li><a href="https://paulbourke.net/">Paul Bourks</a>: extensive list of math art projects, technical information, academic papers, and source code.</li>
+<li><a href="https://profconradi.com/">Simone Conradi</a>: professionally-rendered math art projects with some technical information such as formulas and parameters.</li>
+<li><a href="https://manasataramgini.wordpress.com/2016/12/18/some-reminiscences-of-our-study-of-chaotic-maps-1/">mAnasa-taraMgiNI</a>: chaotic maps.</li>
+<li><a href="http://www.3d-meier.de/index.html">Homepage Jürgen Meier</a>: Extensive list of attractors, Mandelbrots, Iterated Function Systems (IFS), minimal surfaces, knots, parametric surfaces and solids, mathematical tables, etc.  See the "Tutorials" section. German.</li>
+<li><a href="https://demonstrations.wolfram.com/">Wolfram Demonstrations Project</a>: A bit of everything.</li>
+<li><a href="https://wikipedia.org/">Wikipedia</a>: 
+    <a href="https://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot set</a>,
+    <a href="https://en.wikipedia.org/wiki/Tinkerbell_map">tinkerbell</a>, 
+    <a href="https://en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension">fractals by Hausdorf dimension</a>,
+    <a href="https://en.wikipedia.org/wiki/Multiscroll_attractor">mulktiscroll attractor</a>
+    .
+    </li>
+<li><a href="https://www.pythoninformer.com/generative-art/fractals/">PythonInformer</a>: List of Fractals made with generativepy.</li>
+<li><a href="https://www.algosome.com/articles/index.php#Games%20and%20Graphics">Algosome Blog</a>: List of mathemetical programming projects, including many fractals and dynamical systems.</li>
+<li><a href="https://sprott.physics.wisc.edu/chaostsa/">J.C.Sprott: Chaos and Time-Series Analysis</a>: Course on the subject.</li>
+</ul>
+</body>
+</html>

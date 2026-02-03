@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Robert Parker">
+    <meta name="description" content="Mandelbrot Lambda Function Fractal">
+    <meta name="keywords" content="bedhead, fractal, math, chaos, attractor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <link rel="stylesheet" type="text/css" href="./css/fractal.css">
+    <link rel="icon" sizes="32x32" type="image/png" href="./images/fractal-bedhead-thumbnail.jpg">
+    <title>Mandelbrot Lambda Function Fractal</title>
+<style>
+</style>
+</head>
+
+<body>
+    <figure id="bannerID" class="banner-wrapper">
+        <a href="./fractals.html">
+        <picture id="image-1" class="banner-item banner-visible">
+            <source media="(max-width: 640px)" srcset="./images/header-narrow.jpg" />
+            <source media="(max-width: 896px)" srcset="./images/header-medium.jpg" />
+            <img src="./images/header-wide.jpg" width="100%" height="64" alt="Pickover Attractor" />
+        </picture>
+    </a>
+
+    </figure>
+
+<h1>Mandelbrot Lambda Function Fractal</h1>
+<p>The Mandelbrot Lambda Function Fractal can be generated with the following equation, which extends the traditional equation by allowing pertubations (a+bi) and (c+di):</p>
+<math display="block">
+    <msup>
+        <mrow>
+        <msub><mrow><mi>Z</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub>
+        <mo>=</mo>
+            <mi>C</mi><mi>fn</mi>
+            <mo>(</mo>
+                <msub><mrow><mi>Z</mi></mrow><mi>n</mi></msub>
+                <mo>+</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b<i>i</i></mi><mo>)</mo>
+            <mo>)</mo>
+        </mrow>
+        <mrow><mo>(</mo><mi>c</mi><mo>+</mo><mi>d<i>i</i></mi><mo>)</mo>
+        </mrow>
+</math>
+<p>THe 'fn' can be replaced by any function, I enjoy using the following trigonometric function: None (evaluated without a function), Sin, Cos, SinH, CosH, <math><msup><mi>e</mi><mi>z</mi></msup></math>, Ln, <math><msup><mn>2</mn><mi>z</mi></msup></math>.
+<div class="fractal-box">
+    <div><img src="./images/fractal-mandelbrot-lambda-fn-01.jpg"  alt="Mandelbrot Lambda Function Fractal"><span>Mandelbrot Lambda Function Fractal - with Sin function lambda</span></div>
+</div>
+</body>
+</html>
+
