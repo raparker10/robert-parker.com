@@ -74,3 +74,36 @@
 .fractal-image-container img {
     width:75%;
 }
+
+
+.fractals-native-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:flex-start
+}    
+
+.fractals-native-box a {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    text-decoration: none;
+    color: black;    
+}
+
+.fractals-native-box img {
+    display: block;
+    margin: 10px; /* auto; */
+    max-width: 100%;    
+    width: 128px;
+    height: auto;
+}
+
+.fractals-native-box img:hover {
+    transform: scale(1.025);
+}
+
+.fractals-native-bos span {
+    font-size: 16px;
+    font-family: sans-serif;
+}

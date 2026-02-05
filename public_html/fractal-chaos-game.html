@@ -27,7 +27,7 @@
     </figure>
 
 <h1>Chaos Game</h1>
-<p>The Chaos Game the following procedure:</p>
+<p>The Chaos Game creates fractals using the following procedure:
 <!--
 <math display="block">
     <mrow>
@@ -53,8 +53,49 @@
     </mrow>
 </math>
 -->
+<p>
+<ol>
+<li>Define a polygon with 3 or more vertices</li>
+<li>Select a starting point either inside our outside the vertices</li>
+<li>Select a random vertex</li>
+<li>Mark a point 'r' percent between the point and vertex</li>
+<li>Repeat from step 3</li>
+</ol>
+It is surprising that this random procedure produces fractals instead of a random cloud of points.
+</p>
+<p>
+There are several options to be considered when playing the chaos game:
+<ul>
+    <li>How many vertices should be used</li>
+    <li>What percent of the distance should be marked in between the selected point the the vertex</li>
+    <li>What is the vertex selection procedure</li>
+</ul>
+The goal is often to select a value of 'r' that produces shapes that just 'kiss' rather than overlap.  The procedure for calculating an optimal value is discussed in depth on <a href="https://en.wikipedia.org/wiki/Chaos_game">wikipedia</a>.
+</P>
+
 <div class="fractal-box">
     <div><img src="./images/fractal-chaos-game-01.jpg"  alt="Chaos Game"><span>Chaos Game with 3 Vertices</span></div>
+    <div><img src="./images/fractal-chaos-game-ag-tiny-01.gif"  alt="Animated Chaos Game with 6 Vertices"><span>Effect of selecting different midpoints-6 vertices</span></div>
+</div>
+
+<h4>Chaos Game with Different Vertex Counts</h4>
+<div class="fractals-native-box">
+    <div><img src="./images/fractal-chaos-game-03-vertices.jpg"  alt="3 vertices"><span>3 Vertices</span></div>
+    <div><img src="./images/fractal-chaos-game-04-vertices.jpg"  alt="4 vertices"><span>4 Vertices</span></div>
+    <div><img src="./images/fractal-chaos-game-05-vertices.jpg"  alt="5 vertices"><span>5 Vertices</span></div>
+    <div><img src="./images/fractal-chaos-game-06-vertices.jpg"  alt="6 vertices"><span>6 Vertices</span></div>
+    <div><img src="./images/fractal-chaos-game-07-vertices.jpg"  alt="7 vertices"><span>7 Vertices</span></div>
+    <div><img src="./images/fractal-chaos-game-08-vertices.jpg"  alt="8 vertices"><span>8 Vertices</span></div>
+    <div><img src="./images/fractal-chaos-game-09-vertices.jpg"  alt="9 vertices"><span>9 Vertices</span></div>
+    <div><img src="./images/fractal-chaos-game-10-vertices.jpg"  alt="10 vertices"><span>10 Vertices</span></div>
+    <div><img src="./images/fractal-chaos-game-11-vertices.jpg"  alt="11 vertices"><span>11 Vertices</span></div>
+    <div><img src="./images/fractal-chaos-game-12-vertices.jpg"  alt="12 vertices"><span>12 Vertices</span></div>
+    <div><img src="./images/fractal-chaos-game-13-vertices.jpg"  alt="13 vertices"><span>13 Vertices</span></div>
+</div>
+<h4>Examples</h4>
+<span>Points can be colored according to the number of times they were visited, or by some other technique.</span>
+<div class="fractal-box">
+    <div><img src="./images/fractal-chaos-game-03-vertices-colored.jpg"  alt="3 vertices"></div>
 </div>
 </body>
 </html>
