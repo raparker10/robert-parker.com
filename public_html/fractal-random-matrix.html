@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Robert Parker">
+    <meta name="description" content="Random Matrix">
+    <meta name="keywords" content="random, matrix, fractal, math, chaos, attractor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <link rel="stylesheet" type="text/css" href="./css/fractal.css">
+    <link rel="icon" sizes="32x32" type="image/png" href="./images/fractal-bedhead-thumbnail.jpg">
+    <title>Random Matrix</title>
+<style>
+</style>
+</head>
+
+<body>
+    <figure id="bannerID" class="banner-wrapper">
+        <a href="./fractals.html">
+        <picture id="image-1" class="banner-item banner-visible">
+            <source media="(max-width: 640px)" srcset="./images/header-narrow.jpg" />
+            <source media="(max-width: 896px)" srcset="./images/header-medium.jpg" />
+            <img src="./images/header-wide.jpg" width="100%" height="64" alt="Pickover Attractor" />
+        </picture>
+    </a>
+
+    </figure>
+
+<h1>Random Matrix</h1>
+<p>Random matrices have elements replaced with random values of specified domain and domain or distribution.  Then complex eigenvalues are produced and plotted, generally as a density plot.
+If done for enough matrices (thousands to billions) then elegant and ghostly images gradually appear.
+</p>
+<p>
+I first encountered this type of image in a post from Professor Simone Conradi, who shared an image of "eigenman" which looks a lot like a person.  
+It took me a while to figure out how this was done, but the Bohemian Matrices website and Professor Conradi's github repo really helped.
+</p>
+<p>Although I initially wanted to implement this as a DirectX compute shader, I opted to use a CPU-based approach instead due to the availability of the Eigen library.  
+It runs with a large number of threads and heats up the computer room quite a bit.  The images on this site generally render 10-60 frames per second.  While simple images of this type can also render quickly, high-quality images and videos can take hours to days.
+</P>
+
+<P>With thanks to <a href="https://profconradi.com/">Simone Conradi</a> and <a href="http://www.bohemianmatrices.com/gallery/">Bohemian Matrices</a>.</P>
+<div class="fractal-box">
+    <div><img src="./images/fractal-random-matrix-01.jpg"  alt="Random Matrix of order 100"><span>Eigenvalue density plot of order 100 complex random matrices</span></div>
+    <div><img width="800" height="600" src="./images/frac-random-matrix-ag-01.gif"  alt="Animated eigenvalue density plot of order 100 random matrices"><span width="800">Animated eigenvalue density plot of order 100 complex random matrices</span></div>
+</div>
+<h2>Related Information</h2>
+ <ul>
+    <li><a href="http://www.bohemianmatrices.com/gallery/Eigenfish_5/">http://www.bohemianmatrices.com/gallery/Eigenfish_5/</a></li>
+    <li><a href="https://github.com/profConradi/eigenfish/tree/main">https://github.com/profConradi/eigenfish/tree/main</a></li>
+    <li><a href="https://profconradi.com/">https://profconradi.com/</a></li>
+</ul>    
+
+</body>
+</html>
+
