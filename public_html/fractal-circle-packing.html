@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Robert Parker">
+    <meta name="description" content="Circle Packing">
+    <meta name="keywords" content="circle packing, polygon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <link rel="stylesheet" type="text/css" href="./css/fractal.css">
+    <link rel="icon" sizes="32x32" type="image/png" href="./images/fractal-bedhead-thumbnail.jpg">
+    <title>Circle Packing</title>
+<style>
+.imagestrop-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+}    
+</style>
+</head>
+<body>
+    <figure id="bannerID" class="banner-wrapper">
+        <a href="./fractals.html">
+        <picture id="image-1" class="banner-item banner-visible">
+            <source media="(max-width: 640px)" srcset="./images/header-narrow.jpg" />
+            <source media="(max-width: 896px)" srcset="./images/header-medium.jpg" />
+            <img src="./images/header-wide.jpg" width="100%" height="64" alt="Pickover Attractor" />
+        </picture>
+        </a>
+    </figure>
+
+<h1>Circle Packing</h1>
+<div class="fractal-box">
+    <div><img src="./images/fractal-circle-packing-01.jpg"  alt="Circle packing with size and size gradients"><span>Circle packing with size and color gradients</span></div>
+</div>
+<p>
+Regular circle packing in 2-dimensions is a long-solved problem that has been approached from several points of view.
+For example, in 1773 <a href="https://en.wikipedia.org/wiki/Circle_packing">Joseph Louis Lagrange</a> proved that hexagonal packing is the optimal arrangement.</p>
+
+<p>
+More recently, random polygon packing - of which circle packing is a special case - has become
+popular among <a href="https://paulbourke.net/fractals/randomtile/">professionals</a>, and hobbyists such as myself who enjoy creating mathematical art.</p>
+
+<p>
+While the math is interesting, the intent here is to use random circle packing as a model problem to investigate approaches to parallel processing.</p>
+
+<p>
+Generally, the procedure is to create a circle with random location and properties (e.g. color and size).  
+If it is created in a location where it collides with another circle it may be moved a number of times to different locations to
+see if it can fit somewhere else.  If not, it is simply destroyed.  <b>Fast collision detection is the heart of the problem</b>. 
+If no place can be found for circles of a certain size, a smaller size is used for subsequent trials.</p>
+
+<p>Software I use controls for color, size, growth, and filled vs hollow, and speed.</p>
+<p><b>Color</b> of the circles can be based on the following:
+<ul>
+<li>Uniform color (all circles the same)</li>
+<li>Random color</li>
+<li>Sequence in the frame</li>
+<li>Frame number in the animation</li>
+<li>Horizontal location where created</li>
+<li>Vertical location where created</li>
+<li>Radial location where created</li>
+<li>Trigonometric function based on location</li>
+</ul>
+The color method used can be altered at runtime for a variety of effects.
+</p>
+<div class="imagestrop-container">
+<img width="10%" src="images/frac-pp-color-uniform.jpg">
+<img width="10%" src="images/frac-pp-color-random.jpg">
+<img width="10%" src="images/frac-pp-color-frame.jpg">
+<img width="10%" src="images/frac-pp-color-l2r.jpg">
+<img width="10%" src="images/frac-pp-color-r2l.jpg">
+<img width="10%" src="images/frac-pp-color-c2p.jpg">
+<img width="10%" src="images/frac-pp-color-p2c.jpg">
+<img width="10%" src="images/frac-pp-color-sin.jpg">
+</div>
+
+<p><b>Size</b> of the circles can be based on the following:
+<ul>
+<li>Uniform size (all circles the same)</li>
+<li>Random size</li>
+<li>Horizontal location where created</li>
+<li>Radial location where created</li>
+<li>Trigonometric function based on location</li>
+</ul>
+The size method used can be altered at runtime for a variety of effects.
+</p>
+<div class="imagestrop-container">
+<img width="10%" src="images/frac-pp-size-uniform.jpg">
+<img width="10%" src="images/frac-pp-size-random.jpg">
+<img width="10%" src="images/frac-pp-size-l2r.jpg">
+<img width="10%" src="images/frac-pp-size-r2l.jpg">
+<img width="10%" src="images/frac-pp-size-c2p.jpg">
+<img width="10%" src="images/frac-pp-size-p2c.jpg">
+<img width="10%" src="images/frac-pp-size-sin.jpg">
+</div>
+
+<p><b>Growth</b> can be controlled in two ways:
+    <ul>
+        <li>Growth to fill maximum space - that is, a circle was created with radius 10 pixels, but after being placed it is able to grow to 20 pixels without colliding with its neighbor</li>
+        <li>Growth as animation - the size has been determined, but the circle appears to grow to make animations look better</li>
+    </ul>
+Growth visible in videos and images is only for aesthetic purposes (the latter option).  Growth to fill maximum space (the former option) happens silently on the GPU and is not visible.
+</p>
+<div class="imagestrop-container">
+<img width="10%" src="images/frac-pp-growth-01.jpg">
+<img width="10%" src="images/frac-pp-growth-02.jpg">
+<img width="10%" src="images/frac-pp-growth-03.jpg">
+<img width="10%" src="images/frac-pp-growth-04.jpg">
+<img width="10%" src="images/frac-pp-growth-05.jpg">
+<img width="10%" src="images/frac-pp-growth-06.jpg">
+<img width="10%" src="images/frac-pp-growth-07.jpg">
+<img width="10%" src="images/frac-pp-growth-08.jpg">
+</div>
+
+
+<p>Circles may be drawn as <b>filled or hollow</b>.  It's more interesting to grow them hollow (like expending bubbles) and then fill them when the growth animation has completed.</P>
+<p>Maximizing <b>Speed</b> is the main reason for this project.  So tradeoffs are driven towards keping framerates "interactive", such as 10-30 per second. It amazes me that personal computers can generate 256 circles and test them against hundreds of thousands of existing circles to determine placement at such speeds.</p>
+<p>There are also more technical considerations, such as: 
+<ul>
+<li>Circle Size - how much should test circles shrink when the current size doesn't fit</li>
+<li>Concurrency - How many circles should the algorithm place simultaneously (256 are tested concurrently here)</li>
+<li>Capacity - How many circles should the program consider in total (1 million easily fills the screen)</li>
+<li>Movement - How many times shuold a circle move to a new location if it doesn't fit (2000 used here)</li>
+<li>Growth - Should a placed circle grow to fill all available space (optional at runtime)</li>
+<li>Data - How should the data structures that hold circle information be managed</li>
+<li>Algorithm Design - Which parts of the algorithm can be parallelized</li>
+<li>CPU/GPU split - How should processing tasks be allocated to mnake best use of CPU and GPU capabilities (all work except circle growth animation done on GPU)</li>
+</ul>
+</p>
+<p>
+There are several <b>other types</b> of random spece-filling algorithms.  Here are some examples:
+<ul>
+    <li>Circle packing - simple and computationally inexpensive, but perhaps a little boring</li>
+    <li>Regular convex polygons (triangle, square, hexagon, etc.) packing - similar to circle packing but collision detection is a little more expensive</li>
+    <li>Polygon - similar to regular polygons, but with more expensive collision detection</li>
+    <li>Arbitrary shape / bitmap (with transparent areas) - much more complex and requires a different and more computationally expensive method for collision detection</li>
+    <li>Other - hollow shapes, multidimensional (3D), etc.
+</ul>    
+</p>
+<div class="fractal-box">
+    <div><img src="./images/fractal-circle-packing-ag-01.gif"  alt="Parallel circle-packing computation, with growth"><span>Parallel circle-packing computation, with growth</span></div>
+</div>
+
+<h2>Related Information</h2>
+ <ul>
+    <li><a href="https://paulbourke.net/fractals/randomtile/">Paul Bourke's excellent Random space filling of the plane</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Circle_packing">Wikipedia - Circle Packing</a></li>
+
+    
+</ul>    
+
+</body>
+</html>
