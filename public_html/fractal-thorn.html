@@ -28,35 +28,41 @@
 
 <h1>Thorn</h1>
 <p>The Thorn fractal is generated with the following equation:</p>
-<!--
 <math display="block">
     <mrow>
-        <msub><mrow><mi>Z</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub> 
+        <msub><mrow><mi>X</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub> 
         <mo>=</mo>
-        <msubsup><mi>Z</mi><mi>n</mi><mi>a</mi></msubsup> 
+        <mfrac>
+            <msub><mi>X</mi><mi>n</mi></msub> 
+            <mrow><mi>cos</mi><mo>(</mo><msub><mi>Y</mi><mi>n</mi></msub><mo>)</mo> </mrow>
+        </mfrac>
         <mo>+</mo>
-        <mi>C</mi>
-        <mo>+</mo>
-        <mo>(</mo>
-        <mi>c</mi>
-        <mo>+</mo>
-        <mi>d<i>i</i></mi>
-        <mo>)</mo>
+        <msub><mi>X</mi><mi>n</mi></msub> 
     </mrow>
 </math>
 <math display="block">
     <mrow>
-        <msub><mrow><mi>C</mi></mrow><mrow><mi>n</mi><mo>+</mo><mtext>1</mtext></mrow></msub> 
+        <msub><mrow><mi>Y</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub> 
         <mo>=</mo>
-        <mfrac><mrow><msub><mi>C</mi><mi>n</mi></msub></mrow><mn>2</mn></mfrac>
-        <msub><mi>Z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub>
+        <mfrac>
+            <msub><mi>Y</mi><mi>n</mi></msub> 
+            <mrow><mi>sin</mi><mo>(</mo><msub><mi>X</mi><mi>n</mi></msub><mo>)</mo> </mrow>
+        </mfrac>
+        <mo>+</mo>
+        <msub><mi>Y</mi><mi>n</mi></msub> 
     </mrow>
 </math>
--->
 <P>With thanks to <a href="https://paulbourke.net/fractals/thorn/">Paul Bourke</a>.</P>
 <div class="fractal-box">
-    <div><img src="./images/fractal-thorn-01.jpg"  alt="Thorn Fractal"><span>Thorn Fractal</span></div>
+    <div><img src="./images/frac-thorn/fractal-thorn-01.jpg"  alt="Thorn Fractal"><span>Thorn Fractal</span></div>
 </div>
+
+<h2>Related Information</h2>
+<ul>
+    <li><a href="https://paulbourke.net/fractals/thorn/">Paul Bourke - Thorn Fractal</a></li>
+    <li><a href="https://negativespace.net/art/thorn-fractal">Negative Space - Thorn Fractal</a></li>
+</ul>    
+
 </body>
 </html>
 

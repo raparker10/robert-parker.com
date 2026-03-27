@@ -28,34 +28,42 @@
 
 <h1>Gray-Scott Reaction-Diffusion Model</h1>
 <p>The Gray-Scott Reaction-Diffusion Model is generated with the following equation:</p>
-<!--
 <math display="block">
     <mrow>
-        <msub><mrow><mi>Z</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub> 
+        <msub><mrow><mi>a</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub> 
         <mo>=</mo>
-        <msubsup><mi>Z</mi><mi>n</mi><mi>a</mi></msubsup> 
+        <msub><mi>a</mi><mi>n</mi></msub>
+        <mo>-</mo>
+        <msub><mi>a</mi><mi>n</mi></msub>
+        <msubsup><mi>b</mi><mi>n</mi><mn>2</mn></msubsup>
         <mo>+</mo>
-        <mi>C</mi>
+        <mi>f</mi><mo>(</mo><mn>1</mn><mo>-</mo><msub><mi>a</mi><mi>n</mi></msub><mo>)</mo>
+        <mo>+</mo>
+        <msub><mi>D</mi><mi>a</mi></msub><mo>&nabla;</mo><msub><mi>a</mi><mi>n</mi></msub>
+    </mrow>
+</math>
+<math display="block">
+    <mrow>
+        <msub><mrow><mi>b</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub> 
+        <mo>=</mo>
+        <msub><mi>b</mi><mi>n</mi></msub>
+        <mo>+</mo>
+        <msub><mi>a</mi><mi>n</mi></msub>
+        <msubsup><mi>b</mi><mi>n</mi><mn>2</mn></msubsup>
         <mo>+</mo>
         <mo>(</mo>
-        <mi>c</mi>
+        <mi>f</mi>
         <mo>+</mo>
-        <mi>d<i>i</i></mi>
+        <mi>k</mi>
         <mo>)</mo>
+        <msub><mi>b</mi><mi>n</mi></msub>
+        <mo>+</mo>
+        <msub><mi>D</mi><mi>b</mi></msub><mo>&nabla;</mo><msub><mi>b</mi><mi>n</mi></msub>
     </mrow>
 </math>
-<math display="block">
-    <mrow>
-        <msub><mrow><mi>C</mi></mrow><mrow><mi>n</mi><mo>+</mo><mtext>1</mtext></mrow></msub> 
-        <mo>=</mo>
-        <mfrac><mrow><msub><mi>C</mi><mi>n</mi></msub></mrow><mn>2</mn></mfrac>
-        <msub><mi>Z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub>
-    </mrow>
-</math>
--->
 <div class="fractal-box">
-    <div><img src="./images/fractal-gray-scott-01.jpg"  alt="Gray-Scott Reaction-Diffusion Model"><span>Gray-Scott Reaction-Diffusion Model</span></div>
-    <div><img src="./images/fractal-gray-scott-ag-01.gif"  alt="Gray-Scott Reaction-Diffusion Model"><span>Gray-Scott Reaction-Diffusion Model Animation</span></div>
+    <div><img src="./images/frac-grayscott/fractal-gray-scott-01.jpg"  alt="Gray-Scott Reaction-Diffusion Model"><span>Gray-Scott Reaction-Diffusion Model</span></div>
+    <div><img src="./images/frac-grayscott/fractal-gray-scott-ag-01.gif"  alt="Gray-Scott Reaction-Diffusion Model"><span>Gray-Scott Reaction-Diffusion Model Animation</span></div>
 </div>
 </body>
 </html>

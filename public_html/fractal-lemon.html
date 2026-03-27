@@ -28,35 +28,33 @@
 
 <h1>Lemon</h1>
 <p>The Lemon fractal is generated with the following equation:</p>
-<!--
+
 <math display="block">
     <mrow>
         <msub><mrow><mi>Z</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub> 
         <mo>=</mo>
-        <msubsup><mi>Z</mi><mi>n</mi><mi>a</mi></msubsup> 
-        <mo>+</mo>
-        <mi>C</mi>
-        <mo>+</mo>
-        <mo>(</mo>
-        <mi>c</mi>
-        <mo>+</mo>
-        <mi>d<i>i</i></mi>
-        <mo>)</mo>
+        <msub><mi>Z</mi><mn>0</mn></msub> 
+        <mfrac>
+        <mrow>
+            <mo>(</mo><msubsup><mi>Z</mi><mi>n</mi><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>bi</mi><mo>)</mo></mrow></msubsup><mo>+</mo><mi>c</mi><mo>+</mo><mi>di</mi><mo>)</mo>
+            <mo>(</mo><msubsup><mi>Z</mi><mi>n</mi><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>bi</mi><mo>)</mo></mrow></msubsup><mo>+</mo><mi>c</mi><mo>+</mo><mi>di</mi><mo>+</mo><mn>1</mn><mo>)</mo>
+        </mrow>
+            <mrow>
+                <msup><mrow><mo>(</mo><msubsup><mi>Z</mi><mi>n</mi><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>bi</mi><mo>)</mo></mrow></msubsup><mo>+</mo><mi>c</mi><mo>+</mo><mi>di</mi><mo>-</mo><mn>1</mn><mo>)</mo></mrow><mn>2</mn>
+            </mrow>
+        </mfrac>
     </mrow>
 </math>
-<math display="block">
-    <mrow>
-        <msub><mrow><mi>C</mi></mrow><mrow><mi>n</mi><mo>+</mo><mtext>1</mtext></mrow></msub> 
-        <mo>=</mo>
-        <mfrac><mrow><msub><mi>C</mi><mi>n</mi></msub></mrow><mn>2</mn></mfrac>
-        <msub><mi>Z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub>
-    </mrow>
-</math>
--->
-<P>With thanks to <a href="https://paulbourke.net/fractals/lemon/">Paul Bourke</a>.</P>
+<p>It is a generalization of a formula on <a href="https://paulbourke.net/fractals/lemon/">Paul Bourke's website</a> that allows non-integer complex exponents.</p>
 <div class="fractal-box">
-    <div><img src="./images/fractal-lemon-01.jpg"  alt="Lemon Fractal"><span>Lemon Fractal</span></div>
+    <div><img src="./images/frac-lemon/fractal-lemon-01.jpg"  alt="Lemon Fractal"><span>Lemon Fractal</span></div>
 </div>
+
+<h2>Related Information</h2>
+<ul>
+    <li><a href="https://paulbourke.net/fractals/lemon/">Paul Bourke - Lemon</a></li>
+</ul>    
+
 </body>
 </html>
 

@@ -28,33 +28,64 @@
 
 <h1>Burning Ship</h1>
 <p>The Burning Ship fractal is generated with the following equation:</p>
-<!-- <math display="block">
-    <mrow>
-        <msub><mrow><mi>Z</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub> 
-        <mo>=</mo>
-        <msubsup><mi>Z</mi><mi>n</mi><mi>a</mi></msubsup> 
-        <mo>+</mo>
-        <mi>C</mi>
-        <mo>+</mo>
-        <mo>(</mo>
-        <mi>c</mi>
-        <mo>+</mo>
-        <mi>d<i>i</i></mi>
-        <mo>)</mo>
-    </mrow>
-</math>
 <math display="block">
     <mrow>
-        <msub><mrow><mi>C</mi></mrow><mrow><mi>n</mi><mo>+</mo><mtext>1</mtext></mrow></msub> 
+        <msub>
+            <mrow><mi>X</mi></mrow>
+            <mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow>
+        </msub> 
         <mo>=</mo>
-        <mfrac><mrow><msub><mi>C</mi><mi>n</mi></msub></mrow><mn>2</mn></mfrac>
-        <msub><mi>Z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub>
+        <msup>
+            <mi>Z</mi>
+            <mrow>
+                <msubsup>
+                    <mi>X</mi>
+                    <mi>n</mi>
+                    <mn>2</mn>
+                </msubsup>
+                <mo>-</mo>
+                <msubsup>
+                    <mi>Y</mi>
+                    <mi>n</mi>
+                    <mn>2</mn>
+                </msubsup>
+            </mrow>
+        </msup>
+        <mo>-</mo>
+        <msub><mi>Z</mi><mi>x</mi></msub>
     </mrow>
 </math>
--->
+    
+<math display="block">
+    <mrow>
+        <msub>
+            <mrow><mi>Y</mi></mrow>
+            <mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow>
+        </msub> 
+        <mo>=</mo>
+        <mn>2</mn>
+        <mo>|</mo>
+        <msub><mi>X</mi><mi>n</mi></msub>
+        <msub><mi>Y</mi><mi>n</mi></msub>
+        <mo>|</mo>
+        <mo>-</mo>
+        <msub><mi>Z</mi><mi>y</mi></msub>
+    </mrow>
+</math>
+
 <div class="fractal-box">
-    <div><img src="./images/fractal-burning-ship-01.jpg"  alt="Burning Ship Fractal"><span>Burning Ship</span></div>
+    <div><img src="./images/frac-burningship/fractal-burning-ship-01.jpg"  alt="Burning Ship Fractal"><span>Burning Ship</span></div>
 </div>
+
+<h2>Related Information</h2>
+<ul>
+    <li><a href="https://paulbourke.net/fractals/burnship/">Paul Bourke - Burning Ship</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Burning_Ship_fractal">Wikipedia - Burning Ship fractal</a></li>
+    <li><a href="https://www.reddit.com/r/math/comments/72foin/julia_sets_of_the_burning_ship_fractal_are/">Reddit - Burning Ship Julia Sets</a></li>
+    <li><a href="https://www.mitchr.me/SS/BurningShip/index.html">Mitch Richling: Burning Ship Fractal</a></li>
+    <li><a href="https://softologyblog.wordpress.com/2017/02/24/the-burning-ship-fractal/">Softology's Blog - The Burning Ship Fractal (with various interesting coloring methods)</a></li>
+</ul>
+
 </body>
 </html>
 

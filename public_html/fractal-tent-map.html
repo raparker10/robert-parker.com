@@ -28,34 +28,33 @@
 
 <h1>Tent Map</h1>
 <p>The tent map is generated with the following equation:</p>
-<!--
 <math display="block">
     <mrow>
-        <msub><mrow><mi>Z</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub> 
+        <msub><mrow><mi>X</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub> 
         <mo>=</mo>
-        <msubsup><mi>Z</mi><mi>n</mi><mi>a</mi></msubsup> 
-        <mo>+</mo>
-        <mi>C</mi>
-        <mo>+</mo>
-        <mo>(</mo>
-        <mi>c</mi>
-        <mo>+</mo>
-        <mi>d<i>i</i></mi>
-        <mo>)</mo>
+        <mo>{</mo>
+            <mtable>
+                <mtr>
+                    <mtd><mi>a</mi><msub><mi>X</mi><mi>n</mi></msub><mo>,</mo></mtd><mtd><msub><mi>X</mi><mi>n</mi></msub><mo><</mo><mn>0.5</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mi>a</mi><mo>(</mo><mn>1</mn><mo>-</mo><msub><mi>X</mi><mrow><mi>n</mi></mrow></msub><mo>)</mo><mo>,</mo></mtd><mtd><msub><mi>X</mi><mi>n</mi></msub><mo>&ge;</mo><mn>0.5</mn></mtd>
+                </mtr>
+            </mtable>
     </mrow>
 </math>
-<math display="block">
-    <mrow>
-        <msub><mrow><mi>C</mi></mrow><mrow><mi>n</mi><mo>+</mo><mtext>1</mtext></mrow></msub> 
-        <mo>=</mo>
-        <mfrac><mrow><msub><mi>C</mi><mi>n</mi></msub></mrow><mn>2</mn></mfrac>
-        <msub><mi>Z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub>
-    </mrow>
-</math>
--->
 <div class="fractal-box">
-    <div><img src="./images/fractal-tent-map-01.jpg"  alt="Tent Map"><span>Tent Map</span></div>
+    <div><img src="./images/frac-tentmap/fractal-tent-map-01.jpg"  alt="Tent Map"><span>Tent Map</span></div>
 </div>
+
+<h2>Related Information</h2>
+<ul>
+    <li><a href="https://en.wikipedia.org/wiki/Tent_map">Wikipedia - Tent map</a></li>
+    <li><a href="https://demonstrations.wolfram.com/BifurcationDiagramForTheTentMap/">Wolfram Demonstrations Project - Bifurcation Diagram for the Tent map</a></li>
+    <li><a href="https://arxiv.org/pdf/2302.04342">arxive - Graph and backward asymptotics of the tent map</a></li>
+    <li><a href="https://sriramgkn.github.io/reports/Tent_map_report.pdf">Github - Periodicity of the Tent Map</a></li>
+</ul>    
+
 </body>
 </html>
 
